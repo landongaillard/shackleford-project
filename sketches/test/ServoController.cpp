@@ -32,6 +32,11 @@ void ServoController::driveServos()
 }
 
 
+void ServoController::setTarget(uint8_t servo_index, uint8_t target)
+{
+    servos[servo_index].setTarget(target);
+}
+
 void ServoController::setTargetByPercent(uint8_t servo_index, uint8_t target)
 {
     servos[servo_index].setTargetByPercent(target);

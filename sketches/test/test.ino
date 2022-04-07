@@ -1,18 +1,21 @@
-#include "ServoController.h"
+//#include "RobotController.h"
+#include "Servo.h"
+#include "PS3Controller.h"
 
-ServoController *servos;
+//RobotController robot;
 
+PS3Controller cont;
+Servo servo(0);
 
 void setup() {
     Serial.begin(9600);
 
-    // todo: see if can do this out setup
-    servos = new ServoController();
-    servos->addServo(0);
-    servos->setTargetByPercent(0, 100);
+    cont.waitForConnection();
+    //robot.addServo(0);
 }
 
 
 void loop() {
-    servos->driveServos();
+    cont.updateControllerState();
+    Serial.print(cont.getControllerState()[0]);
 }
