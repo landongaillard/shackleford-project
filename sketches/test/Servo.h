@@ -5,21 +5,26 @@
 #define SERVO_H
 
 
-class Servo{
+class Servo {
     private:
     // port of servo
-    int port;
-    // current servo target, in percent (e.g 100%, 50%)
-    int target;
+    uint8_t port;
+    // current servo target as a 4 bit (0-255) integer
+    uint8_t target;
     // pwm driver
     Adafruit_PWMServoDriver pwm;
 
     public:
-    Servo(int port);
+    Servo();
+    Servo(uint8_t port);
 
-    void setTarget(int target);
+    // set target by 4 bit integer, 0-255
+    void setTarget(uint8_t target);
+    // set target by percent, 0-100
+    void setTargetByPercent(uint8_t target);
 
     void moveToTarget();
 };
+
 
 #endif // SERVO_H
