@@ -1,6 +1,6 @@
 #include "RobotController.h"
-
-RobotController::RobotController() : servo_controller(), ps3_controller()
+// readd ps3 controlelr here
+RobotController::RobotController() : servo_controller()
 {
 
 }
@@ -27,6 +27,6 @@ void RobotController::setServoTargets()
 
 void RobotController::getPS3Inputs()
 {
-    input_values = ps3_controller.getControllerState();
+    //input_values = ps3_controller.getControllerState();
 }
 

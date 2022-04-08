@@ -10,7 +10,7 @@ class RobotController {
     // can be changed for each bot
     uint8_t* input_values;
     ServoController servo_controller;
-    PS3Controller ps3_controller;
+    //PS3Controller ps3_controller;
 
     public:
     RobotController();

@@ -10,6 +10,9 @@ ServoController::ServoController()
 
 bool ServoController::addServo(uint8_t port)
 {
+    Servo new_servo(port);
+    servos[0] = new_servo;
+    /*
     if(servos_size + 1 > MAX_SERVOS)
     {
         return false;
@@ -20,6 +23,7 @@ bool ServoController::addServo(uint8_t port)
         servos_size++;
         return true;
     }
+    */
 }
 
 

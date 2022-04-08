@@ -1,21 +1,28 @@
-//#include "RobotController.h"
-#include "Servo.h"
+#include "RobotController.h"
 #include "PS3Controller.h"
 
-//RobotController robot;
+RobotController* robot;
+PS3Controller* cont;
 
-PS3Controller cont;
-Servo servo(0);
 
 void setup() {
-    Serial.begin(9600);
-
-    cont.waitForConnection();
-    //robot.addServo(0);
+    Serial.begin(115200);
+    Serial.println("test");
+    robot = new RobotController;
+    Serial.println("test2");
+    cont = new PS3Controller;
+    Serial.println("test3");
+    //robot->addServo(0);
+    Serial.println("test4");
+    robot->addServo(0);
 }
 
 
 void loop() {
-    cont.updateControllerState();
-    Serial.print(cont.getControllerState()[0]);
+    cont->waitForConnection();
+    //cont->updateControllerState();
+
+    //robot->doStuff();
+    //cont.updateControllerState();
+    //Serial.print(cont.getControllerState()[0]);
 }
