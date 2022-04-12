@@ -14,6 +14,8 @@ class ServoController {
     public:
     ServoController();
 
+    void setup();
+
     bool addServo(uint8_t port);
 
     void driveServos();

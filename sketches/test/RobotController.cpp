@@ -1,8 +1,14 @@
 #include "RobotController.h"
 // readd ps3 controlelr here
-RobotController::RobotController() : servo_controller()
+RobotController::RobotController()
 {
+    //input_values = nullptr;
+}
 
+
+void RobotController::setup()
+{
+    servo_controller.setup();
 }
 
 
@@ -18,10 +24,13 @@ void RobotController::doStuff()
 }
 
 
-void RobotController::setServoTargets()
+void RobotController::setServoTargets(uint8_t* arr)
 {
     // not finished
-    servo_controller.setTargetByPercent(0, input_values[0]);
+    servo_controller.setTarget(0, arr[0]);
+    servo_controller.setTarget(1, arr[1]);
+    servo_controller.setTarget(2, arr[2]);
+    //Serial.println(arr[0]);
 }
 
 

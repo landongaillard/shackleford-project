@@ -1,28 +1,45 @@
 #include "RobotController.h"
-#include "PS3Controller.h"
+#include <PS3BT.h>
 
-RobotController* robot;
-PS3Controller* cont;
+RobotController bot;
 
+USB Usb;
+BTD Btd(&Usb);
+PS3BT PS3(&Btd);
+
+uint8_t arr[3];
 
 void setup() {
     Serial.begin(115200);
-    Serial.println("test");
-    robot = new RobotController;
-    Serial.println("test2");
-    cont = new PS3Controller;
-    Serial.println("test3");
-    //robot->addServo(0);
-    Serial.println("test4");
-    robot->addServo(0);
+
+    // check if usb opened
+    if (Usb.Init() == -1)
+    {
+        Serial.println("OSC did not start");
+        // halt program
+        while (1);
+    }
+    Serial.println("PS3 Bluetooth Library Started");
+    
+    bot.addServo(0);
+    bot.addServo(1);
+    bot.addServo(2);
+
+    bot.setup();
 }
 
 
 void loop() {
-    cont->waitForConnection();
-    //cont->updateControllerState();
+    //Serial.println("test");
 
-    //robot->doStuff();
-    //cont.updateControllerState();
-    //Serial.print(cont.getControllerState()[0]);
+    Usb.Task();
+    if(PS3.PS3Connected)
+    {
+        //Serial.println(PS3.getAnalogButton(R2));
+        arr[0] = PS3.getAnalogButton(R2);
+        arr[1] = PS3.getAnalogHat(LeftHatX);
+        arr[2] = PS3.getAnalogHat(RightHatX);
+        bot.setServoTargets(arr);
+        bot.doStuff();
+    }
 }

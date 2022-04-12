@@ -3,13 +3,9 @@
 
 PS3Controller::PS3Controller() : Btd(&Usb), PS3(&Btd)
 {
-    if (Usb.Init() == -1)
-    {
-        Serial.print(F("\r\nOSC did not start"));
-        while (1); //halt
-    }
-  Serial.print(F("\r\nPS3 Bluetooth Library Started"));
+
 }
+
 
 uint8_t* PS3Controller::getControllerState()
 {
@@ -17,7 +13,19 @@ uint8_t* PS3Controller::getControllerState()
 }
 
 
-void PS3Controller::waitForConnection()
+bool PS3Controller::setupTask()
+{
+    if (Usb.Init() == -1)
+    {
+        Serial.println("OSC did not start");
+        return false;
+    }
+
+    return true;
+}
+
+
+void PS3Controller::loopTask()
 {
     Usb.Task();
 

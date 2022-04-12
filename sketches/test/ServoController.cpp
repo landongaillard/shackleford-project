@@ -8,22 +8,20 @@ ServoController::ServoController()
 }
 
 
+void ServoController::setup()
+{
+    for(uint8_t i = 0; i < servos_size; i++)
+    {
+        servos[i].setup();
+    }
+}
+
+
 bool ServoController::addServo(uint8_t port)
 {
     Servo new_servo(port);
-    servos[0] = new_servo;
-    /*
-    if(servos_size + 1 > MAX_SERVOS)
-    {
-        return false;
-    }
-    else
-    {
-        servos[servos_size] = Servo(port);
-        servos_size++;
-        return true;
-    }
-    */
+    servos[servos_size] = new_servo;
+    servos_size++;
 }
 
 

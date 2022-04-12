@@ -5,25 +5,22 @@
 #define FREQUENCY             50
 
 
-Servo::Servo()
+Servo::Servo() : pwm()
 {
-    port = -1;
+    port = 255;
     target = 0;
-
-    pwm = Adafruit_PWMServoDriver();
-
-    pwm.begin();
-    pwm.setPWMFreq(FREQUENCY);
 }
 
 
-Servo::Servo(uint8_t port)
+Servo::Servo(uint8_t port) : pwm()
 {
     this->port = port;
-    this->target = 0;
+    target = 0;
+}
 
-    pwm = Adafruit_PWMServoDriver();
 
+void Servo::setup()
+{
     pwm.begin();
     pwm.setPWMFreq(FREQUENCY);
 }
@@ -44,6 +41,7 @@ void Servo::setTargetByPercent(uint8_t target)
 void Servo::moveToTarget()
 {
     // todo: not use int
+    
     int pulse_wide = map(target, 0, 255, MIN_PULSE_WIDTH, MAX_PULSE_WIDTH);
     int pulse_width = int(float(pulse_wide) / 1000000 * FREQUENCY * 4096);
 

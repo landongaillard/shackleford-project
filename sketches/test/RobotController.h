@@ -16,7 +16,8 @@ class RobotController {
     RobotController();
 
     // todo: fix this shit
-    void setServoTargets();
+    void setup();
+    void setServoTargets(uint8_t* arr);
     void getPS3Inputs();
     void addServo(uint8_t port);
     void doStuff();

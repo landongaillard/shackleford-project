@@ -7,20 +7,20 @@
 
 class PS3Controller {
     private:
-    uint8_t controller_state[3] = {0, 0, 0};
-
+    extern uint8_t controller_state[3];
     USB Usb;
     BTD Btd;
     PS3BT PS3;
     
+    void updateControllerState();
+
     public:
     PS3Controller();
 
     uint8_t* getControllerState();
 
-    void waitForConnection();
-    void updateControllerState();
-    
+    bool setupTask();
+    void loopTask();
 };
 
 #endif // PS3CONTROLLER_H

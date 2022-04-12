@@ -18,6 +18,7 @@ class Servo {
     Servo();
     Servo(uint8_t port);
 
+    void setup();
     // set target by 8 bit integer, 0-255
     void setTarget(uint8_t target);
     // set target by percent, 0-100
