@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "The Shackleford Project", "index.html", [
+    [ "Resources Used", "index.html#autotoc_md1", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
