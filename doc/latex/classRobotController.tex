@@ -1,0 +1,169 @@
+\hypertarget{classRobotController}{}\doxysection{Robot\+Controller Class Reference}
+\label{classRobotController}\index{RobotController@{RobotController}}
+
+
+{\ttfamily \#include $<$Robot\+Controller.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRobotController_a1b3379c8c3350b2130f30c8bd23cba33}{Robot\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \mbox{\hyperlink{classRobotController}{Robot\+Controller}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRobotController_a04152b9a93b28dafd203b3c36ef939be}{setup\+Task}} ()
+\begin{DoxyCompactList}\small\item\em Setup task for robot. Should run in \mbox{\hyperlink{classRobotController_a4389fc3debdb66f75caf6a14a0018e43}{setup()}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRobotController_a2391fc81fc864bb3097da9ed5fc0a5b6}{loop\+Task}} ()
+\begin{DoxyCompactList}\small\item\em Loop task for robot. Should run in \mbox{\hyperlink{main_8ino_afe461d27b9c48d5921c00d521181f12f}{loop()}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRobotController_ab51ff4f4b76d8a5becbf1a42c7b409a1}{set\+Servo\+Targets}} (uint8\+\_\+t $\ast$\mbox{\hyperlink{working_8ino_a51c4473089e9d492056f55ccad7d4248}{arr}}, uint8\+\_\+t arr\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Set servo targets using an 8-\/bit integer array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRobotController_a0d5c93bec4ec635ec086a097a49b44bd}{add\+Servo}} (uint8\+\_\+t port)
+\begin{DoxyCompactList}\small\item\em Adds a servo to the servo controller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRobotController_a1b3379c8c3350b2130f30c8bd23cba33}{Robot\+Controller}} ()
+\item 
+void \mbox{\hyperlink{classRobotController_a4389fc3debdb66f75caf6a14a0018e43}{setup}} ()
+\item 
+void \mbox{\hyperlink{classRobotController_a10365db62e41868895448fcd99153300}{set\+Servo\+Targets}} (uint8\+\_\+t $\ast$\mbox{\hyperlink{working_8ino_a51c4473089e9d492056f55ccad7d4248}{arr}})
+\item 
+void \mbox{\hyperlink{classRobotController_a6c130f13db9fa9de057f81cb1b0ede5a}{get\+PS3\+Inputs}} ()
+\item 
+void \mbox{\hyperlink{classRobotController_a0d5c93bec4ec635ec086a097a49b44bd}{add\+Servo}} (uint8\+\_\+t port)
+\item 
+void \mbox{\hyperlink{classRobotController_a2391fc81fc864bb3097da9ed5fc0a5b6}{loop\+Task}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classServoController}{Servo\+Controller}} \mbox{\hyperlink{classRobotController_ad0747debe4f65eff30fe86632ec14b04}{servo\+\_\+controller}}
+\begin{DoxyCompactList}\small\item\em Controller for robot\textquotesingle{}s servos. \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{classRobotController_a715a231a83eda86f6593457c014dfd68}{input\+\_\+values}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRobotController_a1b3379c8c3350b2130f30c8bd23cba33}\label{classRobotController_a1b3379c8c3350b2130f30c8bd23cba33}} 
+\index{RobotController@{RobotController}!RobotController@{RobotController}}
+\index{RobotController@{RobotController}!RobotController@{RobotController}}
+\doxysubsubsection{\texorpdfstring{RobotController()}{RobotController()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Robot\+Controller\+::\+Robot\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \mbox{\hyperlink{classRobotController}{Robot\+Controller}} object. 
+
+\mbox{\Hypertarget{classRobotController_a1b3379c8c3350b2130f30c8bd23cba33}\label{classRobotController_a1b3379c8c3350b2130f30c8bd23cba33}} 
+\index{RobotController@{RobotController}!RobotController@{RobotController}}
+\index{RobotController@{RobotController}!RobotController@{RobotController}}
+\doxysubsubsection{\texorpdfstring{RobotController()}{RobotController()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Robot\+Controller\+::\+Robot\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRobotController_a0d5c93bec4ec635ec086a097a49b44bd}\label{classRobotController_a0d5c93bec4ec635ec086a097a49b44bd}} 
+\index{RobotController@{RobotController}!addServo@{addServo}}
+\index{addServo@{addServo}!RobotController@{RobotController}}
+\doxysubsubsection{\texorpdfstring{addServo()}{addServo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Robot\+Controller\+::add\+Servo (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port }\end{DoxyParamCaption})}
+
+
+
+Adds a servo to the servo controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Port of servo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRobotController_a0d5c93bec4ec635ec086a097a49b44bd}\label{classRobotController_a0d5c93bec4ec635ec086a097a49b44bd}} 
+\index{RobotController@{RobotController}!addServo@{addServo}}
+\index{addServo@{addServo}!RobotController@{RobotController}}
+\doxysubsubsection{\texorpdfstring{addServo()}{addServo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Robot\+Controller\+::add\+Servo (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRobotController_a6c130f13db9fa9de057f81cb1b0ede5a}\label{classRobotController_a6c130f13db9fa9de057f81cb1b0ede5a}} 
+\index{RobotController@{RobotController}!getPS3Inputs@{getPS3Inputs}}
+\index{getPS3Inputs@{getPS3Inputs}!RobotController@{RobotController}}
+\doxysubsubsection{\texorpdfstring{getPS3Inputs()}{getPS3Inputs()}}
+{\footnotesize\ttfamily void Robot\+Controller\+::get\+PS3\+Inputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRobotController_a2391fc81fc864bb3097da9ed5fc0a5b6}\label{classRobotController_a2391fc81fc864bb3097da9ed5fc0a5b6}} 
+\index{RobotController@{RobotController}!loopTask@{loopTask}}
+\index{loopTask@{loopTask}!RobotController@{RobotController}}
+\doxysubsubsection{\texorpdfstring{loopTask()}{loopTask()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Robot\+Controller\+::loop\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loop task for robot. Should run in \mbox{\hyperlink{main_8ino_afe461d27b9c48d5921c00d521181f12f}{loop()}}. 
+
+\mbox{\Hypertarget{classRobotController_a2391fc81fc864bb3097da9ed5fc0a5b6}\label{classRobotController_a2391fc81fc864bb3097da9ed5fc0a5b6}} 
+\index{RobotController@{RobotController}!loopTask@{loopTask}}
+\index{loopTask@{loopTask}!RobotController@{RobotController}}
+\doxysubsubsection{\texorpdfstring{loopTask()}{loopTask()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Robot\+Controller\+::loop\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRobotController_a10365db62e41868895448fcd99153300}\label{classRobotController_a10365db62e41868895448fcd99153300}} 
+\index{RobotController@{RobotController}!setServoTargets@{setServoTargets}}
+\index{setServoTargets@{setServoTargets}!RobotController@{RobotController}}
+\doxysubsubsection{\texorpdfstring{setServoTargets()}{setServoTargets()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Robot\+Controller\+::set\+Servo\+Targets (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{arr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRobotController_ab51ff4f4b76d8a5becbf1a42c7b409a1}\label{classRobotController_ab51ff4f4b76d8a5becbf1a42c7b409a1}} 
+\index{RobotController@{RobotController}!setServoTargets@{setServoTargets}}
+\index{setServoTargets@{setServoTargets}!RobotController@{RobotController}}
+\doxysubsubsection{\texorpdfstring{setServoTargets()}{setServoTargets()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Robot\+Controller\+::set\+Servo\+Targets (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{arr,  }\item[{uint8\+\_\+t}]{arr\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Set servo targets using an 8-\/bit integer array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & 8-\/bit integer array \\
+\hline
+{\em arr\+\_\+size} & Size of arr \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRobotController_a4389fc3debdb66f75caf6a14a0018e43}\label{classRobotController_a4389fc3debdb66f75caf6a14a0018e43}} 
+\index{RobotController@{RobotController}!setup@{setup}}
+\index{setup@{setup}!RobotController@{RobotController}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily void Robot\+Controller\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classRobotController_a04152b9a93b28dafd203b3c36ef939be}\label{classRobotController_a04152b9a93b28dafd203b3c36ef939be}} 
+\index{RobotController@{RobotController}!setupTask@{setupTask}}
+\index{setupTask@{setupTask}!RobotController@{RobotController}}
+\doxysubsubsection{\texorpdfstring{setupTask()}{setupTask()}}
+{\footnotesize\ttfamily void Robot\+Controller\+::setup\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Setup task for robot. Should run in \mbox{\hyperlink{classRobotController_a4389fc3debdb66f75caf6a14a0018e43}{setup()}}. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classRobotController_a715a231a83eda86f6593457c014dfd68}\label{classRobotController_a715a231a83eda86f6593457c014dfd68}} 
+\index{RobotController@{RobotController}!input\_values@{input\_values}}
+\index{input\_values@{input\_values}!RobotController@{RobotController}}
+\doxysubsubsection{\texorpdfstring{input\_values}{input\_values}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ Robot\+Controller\+::input\+\_\+values\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classRobotController_ad0747debe4f65eff30fe86632ec14b04}\label{classRobotController_ad0747debe4f65eff30fe86632ec14b04}} 
+\index{RobotController@{RobotController}!servo\_controller@{servo\_controller}}
+\index{servo\_controller@{servo\_controller}!RobotController@{RobotController}}
+\doxysubsubsection{\texorpdfstring{servo\_controller}{servo\_controller}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classServoController}{Servo\+Controller}} Robot\+Controller\+::servo\+\_\+controller\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Controller for robot\textquotesingle{}s servos. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sketches/main/\mbox{\hyperlink{main_2RobotController_8h}{Robot\+Controller.\+h}}\item 
+sketches/working/\mbox{\hyperlink{working_2RobotController_8h}{Robot\+Controller.\+h}}\item 
+sketches/main/\mbox{\hyperlink{main_2RobotController_8cpp}{Robot\+Controller.\+cpp}}\item 
+sketches/working/\mbox{\hyperlink{working_2RobotController_8cpp}{Robot\+Controller.\+cpp}}\end{DoxyCompactItemize}

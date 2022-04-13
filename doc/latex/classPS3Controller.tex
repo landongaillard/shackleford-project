@@ -1,0 +1,219 @@
+\hypertarget{classPS3Controller}{}\doxysection{PS3\+Controller Class Reference}
+\label{classPS3Controller}\index{PS3Controller@{PS3Controller}}
+
+
+{\ttfamily \#include $<$PS3\+Controller.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPS3Controller_a526cb88f473f8381ec1e1be7d1673e4e}{PS3\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classPS3Controller}{PS3\+Controller}} object. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPS3Controller_a8194923898e91d63a8bd6c664bc59914}{is\+Connected}} ()
+\begin{DoxyCompactList}\small\item\em Returns controller connection state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPS3Controller_a9bfdbb70c6d06bd482c517f24d8bbe86}{update\+Controller\+State}} ()
+\begin{DoxyCompactList}\small\item\em Updates the controller\+\_\+state array. \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{classPS3Controller_a1f2131d9b6ed6188f8e99af250d58b00}{get\+Controller\+State}} ()
+\begin{DoxyCompactList}\small\item\em Return controller\+\_\+state array as pointer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPS3Controller_ad7a18f94cf28a89270226677500b4778}{setup\+Task}} ()
+\begin{DoxyCompactList}\small\item\em Setup function for \mbox{\hyperlink{classPS3Controller}{PS3\+Controller}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPS3Controller_a1d399a4631ddb09068730c17802b21fc}{loop\+Task}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classPS3Controller}{PS3\+Controller}} loop task. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPS3Controller_a526cb88f473f8381ec1e1be7d1673e4e}{PS3\+Controller}} ()
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{classPS3Controller_a1f2131d9b6ed6188f8e99af250d58b00}{get\+Controller\+State}} ()
+\item 
+bool \mbox{\hyperlink{classPS3Controller_ad7a18f94cf28a89270226677500b4778}{setup\+Task}} ()
+\item 
+void \mbox{\hyperlink{classPS3Controller_a1d399a4631ddb09068730c17802b21fc}{loop\+Task}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classPS3Controller_a9bfdbb70c6d06bd482c517f24d8bbe86}{update\+Controller\+State}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classPS3Controller_a6f524c3e5b49e98a1a44c9aa4070df40}{connected}}
+\begin{DoxyCompactList}\small\item\em Boolean that stores current controller connection state. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classPS3Controller_a1208192c946853a7d45c915d886cc966}{controller\+\_\+state}} \mbox{[}\mbox{\hyperlink{main_2PS3Controller_8h_ae1983ccdd1c47423ab9f2258d4e3b824}{STATE\+\_\+\+ARRAY\+\_\+\+SIZE}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em 8-\/bit integer array that stores the controller state. \end{DoxyCompactList}\item 
+USB \mbox{\hyperlink{classPS3Controller_a659d9dced14b3c9393acef3f993ceacd}{Usb}}
+\begin{DoxyCompactList}\small\item\em USB port object. \end{DoxyCompactList}\item 
+BTD \mbox{\hyperlink{classPS3Controller_aad8689be54cef3d5caf026523ca8958a}{Btd}}
+\begin{DoxyCompactList}\small\item\em Bluetooth dongle object. \end{DoxyCompactList}\item 
+PS3\+BT \mbox{\hyperlink{classPS3Controller_ad9a84486e6ca4953b84b510e88136670}{PS3}}
+\begin{DoxyCompactList}\small\item\em PS3 bluetooth connection object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPS3Controller_a526cb88f473f8381ec1e1be7d1673e4e}\label{classPS3Controller_a526cb88f473f8381ec1e1be7d1673e4e}} 
+\index{PS3Controller@{PS3Controller}!PS3Controller@{PS3Controller}}
+\index{PS3Controller@{PS3Controller}!PS3Controller@{PS3Controller}}
+\doxysubsubsection{\texorpdfstring{PS3Controller()}{PS3Controller()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily PS3\+Controller\+::\+PS3\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classPS3Controller}{PS3\+Controller}} object. 
+
+\mbox{\Hypertarget{classPS3Controller_a526cb88f473f8381ec1e1be7d1673e4e}\label{classPS3Controller_a526cb88f473f8381ec1e1be7d1673e4e}} 
+\index{PS3Controller@{PS3Controller}!PS3Controller@{PS3Controller}}
+\index{PS3Controller@{PS3Controller}!PS3Controller@{PS3Controller}}
+\doxysubsubsection{\texorpdfstring{PS3Controller()}{PS3Controller()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily PS3\+Controller\+::\+PS3\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPS3Controller_a1f2131d9b6ed6188f8e99af250d58b00}\label{classPS3Controller_a1f2131d9b6ed6188f8e99af250d58b00}} 
+\index{PS3Controller@{PS3Controller}!getControllerState@{getControllerState}}
+\index{getControllerState@{getControllerState}!PS3Controller@{PS3Controller}}
+\doxysubsubsection{\texorpdfstring{getControllerState()}{getControllerState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t $\ast$ PS3\+Controller\+::get\+Controller\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return controller\+\_\+state array as pointer. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t$\ast$ 8-\/bit array for controller inputs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPS3Controller_a1f2131d9b6ed6188f8e99af250d58b00}\label{classPS3Controller_a1f2131d9b6ed6188f8e99af250d58b00}} 
+\index{PS3Controller@{PS3Controller}!getControllerState@{getControllerState}}
+\index{getControllerState@{getControllerState}!PS3Controller@{PS3Controller}}
+\doxysubsubsection{\texorpdfstring{getControllerState()}{getControllerState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily uint8\+\_\+t $\ast$ PS3\+Controller\+::get\+Controller\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classPS3Controller_a8194923898e91d63a8bd6c664bc59914}\label{classPS3Controller_a8194923898e91d63a8bd6c664bc59914}} 
+\index{PS3Controller@{PS3Controller}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!PS3Controller@{PS3Controller}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}}
+{\footnotesize\ttfamily bool PS3\+Controller\+::is\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns controller connection state. 
+
+\begin{DoxyReturn}{Returns}
+true Controller is connected 
+
+false Controller is disconnected 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPS3Controller_a1d399a4631ddb09068730c17802b21fc}\label{classPS3Controller_a1d399a4631ddb09068730c17802b21fc}} 
+\index{PS3Controller@{PS3Controller}!loopTask@{loopTask}}
+\index{loopTask@{loopTask}!PS3Controller@{PS3Controller}}
+\doxysubsubsection{\texorpdfstring{loopTask()}{loopTask()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void PS3\+Controller\+::loop\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classPS3Controller}{PS3\+Controller}} loop task. 
+
+\mbox{\hyperlink{classPS3Controller}{PS3\+Controller}} loop task keeps the USB port open and checks if the controller is connected, updating the controller\textquotesingle{}s \textquotesingle{}connected\textquotesingle{} value. \mbox{\Hypertarget{classPS3Controller_a1d399a4631ddb09068730c17802b21fc}\label{classPS3Controller_a1d399a4631ddb09068730c17802b21fc}} 
+\index{PS3Controller@{PS3Controller}!loopTask@{loopTask}}
+\index{loopTask@{loopTask}!PS3Controller@{PS3Controller}}
+\doxysubsubsection{\texorpdfstring{loopTask()}{loopTask()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void PS3\+Controller\+::loop\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classPS3Controller_ad7a18f94cf28a89270226677500b4778}\label{classPS3Controller_ad7a18f94cf28a89270226677500b4778}} 
+\index{PS3Controller@{PS3Controller}!setupTask@{setupTask}}
+\index{setupTask@{setupTask}!PS3Controller@{PS3Controller}}
+\doxysubsubsection{\texorpdfstring{setupTask()}{setupTask()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool PS3\+Controller\+::setup\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Setup function for \mbox{\hyperlink{classPS3Controller}{PS3\+Controller}}. 
+
+Sets up the \mbox{\hyperlink{classPS3Controller}{PS3\+Controller}} for use. Returns true if the USB port successfully initializes, returns false if not
+
+\begin{DoxyReturn}{Returns}
+true USB initialized successfully 
+
+false USB failed to initialize 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPS3Controller_ad7a18f94cf28a89270226677500b4778}\label{classPS3Controller_ad7a18f94cf28a89270226677500b4778}} 
+\index{PS3Controller@{PS3Controller}!setupTask@{setupTask}}
+\index{setupTask@{setupTask}!PS3Controller@{PS3Controller}}
+\doxysubsubsection{\texorpdfstring{setupTask()}{setupTask()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool PS3\+Controller\+::setup\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classPS3Controller_a9bfdbb70c6d06bd482c517f24d8bbe86}\label{classPS3Controller_a9bfdbb70c6d06bd482c517f24d8bbe86}} 
+\index{PS3Controller@{PS3Controller}!updateControllerState@{updateControllerState}}
+\index{updateControllerState@{updateControllerState}!PS3Controller@{PS3Controller}}
+\doxysubsubsection{\texorpdfstring{updateControllerState()}{updateControllerState()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void PS3\+Controller\+::update\+Controller\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the controller\+\_\+state array. 
+
+\mbox{\Hypertarget{classPS3Controller_a9bfdbb70c6d06bd482c517f24d8bbe86}\label{classPS3Controller_a9bfdbb70c6d06bd482c517f24d8bbe86}} 
+\index{PS3Controller@{PS3Controller}!updateControllerState@{updateControllerState}}
+\index{updateControllerState@{updateControllerState}!PS3Controller@{PS3Controller}}
+\doxysubsubsection{\texorpdfstring{updateControllerState()}{updateControllerState()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void PS3\+Controller\+::update\+Controller\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classPS3Controller_aad8689be54cef3d5caf026523ca8958a}\label{classPS3Controller_aad8689be54cef3d5caf026523ca8958a}} 
+\index{PS3Controller@{PS3Controller}!Btd@{Btd}}
+\index{Btd@{Btd}!PS3Controller@{PS3Controller}}
+\doxysubsubsection{\texorpdfstring{Btd}{Btd}}
+{\footnotesize\ttfamily BTD PS3\+Controller\+::\+Btd\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Bluetooth dongle object. 
+
+\mbox{\Hypertarget{classPS3Controller_a6f524c3e5b49e98a1a44c9aa4070df40}\label{classPS3Controller_a6f524c3e5b49e98a1a44c9aa4070df40}} 
+\index{PS3Controller@{PS3Controller}!connected@{connected}}
+\index{connected@{connected}!PS3Controller@{PS3Controller}}
+\doxysubsubsection{\texorpdfstring{connected}{connected}}
+{\footnotesize\ttfamily bool PS3\+Controller\+::connected\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Boolean that stores current controller connection state. 
+
+\mbox{\Hypertarget{classPS3Controller_a1208192c946853a7d45c915d886cc966}\label{classPS3Controller_a1208192c946853a7d45c915d886cc966}} 
+\index{PS3Controller@{PS3Controller}!controller\_state@{controller\_state}}
+\index{controller\_state@{controller\_state}!PS3Controller@{PS3Controller}}
+\doxysubsubsection{\texorpdfstring{controller\_state}{controller\_state}}
+{\footnotesize\ttfamily uint8\+\_\+t PS3\+Controller\+::controller\+\_\+state\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+8-\/bit integer array that stores the controller state. 
+
+Stores the controller\textquotesingle{}s current inputs in an array whose size is defined at the top of the file by STATE\+\_\+\+ARRAY\+\_\+\+SIZE. The values are stored as 8-\/bit integers, which, in this case, come directly from the controller. \mbox{\Hypertarget{classPS3Controller_ad9a84486e6ca4953b84b510e88136670}\label{classPS3Controller_ad9a84486e6ca4953b84b510e88136670}} 
+\index{PS3Controller@{PS3Controller}!PS3@{PS3}}
+\index{PS3@{PS3}!PS3Controller@{PS3Controller}}
+\doxysubsubsection{\texorpdfstring{PS3}{PS3}}
+{\footnotesize\ttfamily PS3\+BT PS3\+Controller\+::\+PS3\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+PS3 bluetooth connection object. 
+
+\mbox{\Hypertarget{classPS3Controller_a659d9dced14b3c9393acef3f993ceacd}\label{classPS3Controller_a659d9dced14b3c9393acef3f993ceacd}} 
+\index{PS3Controller@{PS3Controller}!Usb@{Usb}}
+\index{Usb@{Usb}!PS3Controller@{PS3Controller}}
+\doxysubsubsection{\texorpdfstring{Usb}{Usb}}
+{\footnotesize\ttfamily USB PS3\+Controller\+::\+Usb\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+USB port object. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sketches/main/\mbox{\hyperlink{main_2PS3Controller_8h}{PS3\+Controller.\+h}}\item 
+sketches/working/\mbox{\hyperlink{working_2PS3Controller_8h}{PS3\+Controller.\+h}}\item 
+sketches/main/\mbox{\hyperlink{main_2PS3Controller_8cpp}{PS3\+Controller.\+cpp}}\item 
+sketches/working/\mbox{\hyperlink{working_2PS3Controller_8cpp}{PS3\+Controller.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,211 @@
+\hypertarget{classServoController}{}\doxysection{Servo\+Controller Class Reference}
+\label{classServoController}\index{ServoController@{ServoController}}
+
+
+{\ttfamily \#include $<$Servo\+Controller.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classServoController_aac3d302ad657d4ce3a58eae872110d62}{Servo\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new \mbox{\hyperlink{classServoController}{Servo\+Controller}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServoController_aebcd7d5b3d385ee35a66405456416737}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Setup function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServoController_a365687fad6b684297db573f737c75cee}{add\+Servo}} (uint8\+\_\+t port)
+\begin{DoxyCompactList}\small\item\em Create a new servo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServoController_a5ebf1a0b9f268fb72c70b2c2ab2a9431}{drive\+Servos}} ()
+\begin{DoxyCompactList}\small\item\em Drives every managed servo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServoController_af0e7278a5d241c4063410a8e69fbeeb3}{set\+Target}} (uint8\+\_\+t servo\+\_\+index, uint8\+\_\+t target)
+\begin{DoxyCompactList}\small\item\em Set the target of a specific servo by 8-\/bit integer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServoController_a4f491edc3a60e8484ad2c4a7c31d319f}{set\+Target\+By\+Percent}} (uint8\+\_\+t servo\+\_\+index, uint8\+\_\+t target)
+\begin{DoxyCompactList}\small\item\em Set the target of a specific servo by percent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServoController_a005710c50a666b18f37596ee53d8f459}{set\+Targets\+By\+Array}} (uint8\+\_\+t $\ast$\mbox{\hyperlink{working_8ino_a51c4473089e9d492056f55ccad7d4248}{arr}}, uint8\+\_\+t arr\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Set the servo targets given an array of 8-\/bit integers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classServoController_aac3d302ad657d4ce3a58eae872110d62}{Servo\+Controller}} ()
+\item 
+void \mbox{\hyperlink{classServoController_aebcd7d5b3d385ee35a66405456416737}{setup}} ()
+\item 
+bool \mbox{\hyperlink{classServoController_a365687fad6b684297db573f737c75cee}{add\+Servo}} (uint8\+\_\+t port)
+\item 
+void \mbox{\hyperlink{classServoController_a5ebf1a0b9f268fb72c70b2c2ab2a9431}{drive\+Servos}} ()
+\item 
+void \mbox{\hyperlink{classServoController_af0e7278a5d241c4063410a8e69fbeeb3}{set\+Target}} (uint8\+\_\+t servo\+\_\+index, uint8\+\_\+t target)
+\item 
+void \mbox{\hyperlink{classServoController_a4f491edc3a60e8484ad2c4a7c31d319f}{set\+Target\+By\+Percent}} (uint8\+\_\+t servo\+\_\+index, uint8\+\_\+t target)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classServoController_ac486e9faf76646fe0256f56f98ac53e6}{servos\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em Size of the servos array. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classServo}{Servo}} \mbox{\hyperlink{classServoController_a7f3d9ca2701a860d7326160ed1bd679a}{servos}} \mbox{[}\mbox{\hyperlink{working_2ServoController_8h_a4259c40a55e489ed25c9f3cbb3be05ab}{MAX\+\_\+\+SERVOS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Stores every servo object managed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classServoController_aac3d302ad657d4ce3a58eae872110d62}\label{classServoController_aac3d302ad657d4ce3a58eae872110d62}} 
+\index{ServoController@{ServoController}!ServoController@{ServoController}}
+\index{ServoController@{ServoController}!ServoController@{ServoController}}
+\doxysubsubsection{\texorpdfstring{ServoController()}{ServoController()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Servo\+Controller\+::\+Servo\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \mbox{\hyperlink{classServoController}{Servo\+Controller}} object. 
+
+\mbox{\Hypertarget{classServoController_aac3d302ad657d4ce3a58eae872110d62}\label{classServoController_aac3d302ad657d4ce3a58eae872110d62}} 
+\index{ServoController@{ServoController}!ServoController@{ServoController}}
+\index{ServoController@{ServoController}!ServoController@{ServoController}}
+\doxysubsubsection{\texorpdfstring{ServoController()}{ServoController()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Servo\+Controller\+::\+Servo\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classServoController_a365687fad6b684297db573f737c75cee}\label{classServoController_a365687fad6b684297db573f737c75cee}} 
+\index{ServoController@{ServoController}!addServo@{addServo}}
+\index{addServo@{addServo}!ServoController@{ServoController}}
+\doxysubsubsection{\texorpdfstring{addServo()}{addServo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Servo\+Controller\+::add\+Servo (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port }\end{DoxyParamCaption})}
+
+
+
+Create a new servo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Port of new servo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServoController_a365687fad6b684297db573f737c75cee}\label{classServoController_a365687fad6b684297db573f737c75cee}} 
+\index{ServoController@{ServoController}!addServo@{addServo}}
+\index{addServo@{addServo}!ServoController@{ServoController}}
+\doxysubsubsection{\texorpdfstring{addServo()}{addServo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Servo\+Controller\+::add\+Servo (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classServoController_a5ebf1a0b9f268fb72c70b2c2ab2a9431}\label{classServoController_a5ebf1a0b9f268fb72c70b2c2ab2a9431}} 
+\index{ServoController@{ServoController}!driveServos@{driveServos}}
+\index{driveServos@{driveServos}!ServoController@{ServoController}}
+\doxysubsubsection{\texorpdfstring{driveServos()}{driveServos()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Servo\+Controller\+::drive\+Servos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Drives every managed servo. 
+
+\mbox{\Hypertarget{classServoController_a5ebf1a0b9f268fb72c70b2c2ab2a9431}\label{classServoController_a5ebf1a0b9f268fb72c70b2c2ab2a9431}} 
+\index{ServoController@{ServoController}!driveServos@{driveServos}}
+\index{driveServos@{driveServos}!ServoController@{ServoController}}
+\doxysubsubsection{\texorpdfstring{driveServos()}{driveServos()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Servo\+Controller\+::drive\+Servos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classServoController_af0e7278a5d241c4063410a8e69fbeeb3}\label{classServoController_af0e7278a5d241c4063410a8e69fbeeb3}} 
+\index{ServoController@{ServoController}!setTarget@{setTarget}}
+\index{setTarget@{setTarget}!ServoController@{ServoController}}
+\doxysubsubsection{\texorpdfstring{setTarget()}{setTarget()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Servo\+Controller\+::set\+Target (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{servo\+\_\+index,  }\item[{uint8\+\_\+t}]{target }\end{DoxyParamCaption})}
+
+
+
+Set the target of a specific servo by 8-\/bit integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em servo\+\_\+index} & \mbox{\hyperlink{classServo}{Servo}} to set \\
+\hline
+{\em target} & Target to set, 8-\/bit integer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServoController_af0e7278a5d241c4063410a8e69fbeeb3}\label{classServoController_af0e7278a5d241c4063410a8e69fbeeb3}} 
+\index{ServoController@{ServoController}!setTarget@{setTarget}}
+\index{setTarget@{setTarget}!ServoController@{ServoController}}
+\doxysubsubsection{\texorpdfstring{setTarget()}{setTarget()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Servo\+Controller\+::set\+Target (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{servo\+\_\+index,  }\item[{uint8\+\_\+t}]{target }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classServoController_a4f491edc3a60e8484ad2c4a7c31d319f}\label{classServoController_a4f491edc3a60e8484ad2c4a7c31d319f}} 
+\index{ServoController@{ServoController}!setTargetByPercent@{setTargetByPercent}}
+\index{setTargetByPercent@{setTargetByPercent}!ServoController@{ServoController}}
+\doxysubsubsection{\texorpdfstring{setTargetByPercent()}{setTargetByPercent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Servo\+Controller\+::set\+Target\+By\+Percent (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{servo\+\_\+index,  }\item[{uint8\+\_\+t}]{target }\end{DoxyParamCaption})}
+
+
+
+Set the target of a specific servo by percent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em servo\+\_\+index} & \mbox{\hyperlink{classServo}{Servo}} to set \\
+\hline
+{\em target} & Target to set, 0-\/100 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServoController_a4f491edc3a60e8484ad2c4a7c31d319f}\label{classServoController_a4f491edc3a60e8484ad2c4a7c31d319f}} 
+\index{ServoController@{ServoController}!setTargetByPercent@{setTargetByPercent}}
+\index{setTargetByPercent@{setTargetByPercent}!ServoController@{ServoController}}
+\doxysubsubsection{\texorpdfstring{setTargetByPercent()}{setTargetByPercent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Servo\+Controller\+::set\+Target\+By\+Percent (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{servo\+\_\+index,  }\item[{uint8\+\_\+t}]{target }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classServoController_a005710c50a666b18f37596ee53d8f459}\label{classServoController_a005710c50a666b18f37596ee53d8f459}} 
+\index{ServoController@{ServoController}!setTargetsByArray@{setTargetsByArray}}
+\index{setTargetsByArray@{setTargetsByArray}!ServoController@{ServoController}}
+\doxysubsubsection{\texorpdfstring{setTargetsByArray()}{setTargetsByArray()}}
+{\footnotesize\ttfamily void Servo\+Controller\+::set\+Targets\+By\+Array (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{arr,  }\item[{uint8\+\_\+t}]{arr\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Set the servo targets given an array of 8-\/bit integers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & 8-\/bit integer array \\
+\hline
+{\em arr\+\_\+size} & Size of arr \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServoController_aebcd7d5b3d385ee35a66405456416737}\label{classServoController_aebcd7d5b3d385ee35a66405456416737}} 
+\index{ServoController@{ServoController}!setup@{setup}}
+\index{setup@{setup}!ServoController@{ServoController}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Servo\+Controller\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Setup function. 
+
+\mbox{\Hypertarget{classServoController_aebcd7d5b3d385ee35a66405456416737}\label{classServoController_aebcd7d5b3d385ee35a66405456416737}} 
+\index{ServoController@{ServoController}!setup@{setup}}
+\index{setup@{setup}!ServoController@{ServoController}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Servo\+Controller\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classServoController_a7f3d9ca2701a860d7326160ed1bd679a}\label{classServoController_a7f3d9ca2701a860d7326160ed1bd679a}} 
+\index{ServoController@{ServoController}!servos@{servos}}
+\index{servos@{servos}!ServoController@{ServoController}}
+\doxysubsubsection{\texorpdfstring{servos}{servos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classServo}{Servo}} Servo\+Controller\+::servos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stores every servo object managed. 
+
+\mbox{\Hypertarget{classServoController_ac486e9faf76646fe0256f56f98ac53e6}\label{classServoController_ac486e9faf76646fe0256f56f98ac53e6}} 
+\index{ServoController@{ServoController}!servos\_size@{servos\_size}}
+\index{servos\_size@{servos\_size}!ServoController@{ServoController}}
+\doxysubsubsection{\texorpdfstring{servos\_size}{servos\_size}}
+{\footnotesize\ttfamily uint8\+\_\+t Servo\+Controller\+::servos\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Size of the servos array. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+sketches/main/\mbox{\hyperlink{main_2ServoController_8h}{Servo\+Controller.\+h}}\item 
+sketches/working/\mbox{\hyperlink{working_2ServoController_8h}{Servo\+Controller.\+h}}\item 
+sketches/main/\mbox{\hyperlink{main_2ServoController_8cpp}{Servo\+Controller.\+cpp}}\item 
+sketches/working/\mbox{\hyperlink{working_2ServoController_8cpp}{Servo\+Controller.\+cpp}}\end{DoxyCompactItemize}
