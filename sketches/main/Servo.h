@@ -11,10 +11,12 @@ class Servo {
      * @brief Stores the port of the servo
      */
     uint8_t port;
+
     /**
      * @brief Servo's current target
      */
     uint8_t target;
+
     /**
      * @brief PWM driver object
      */
@@ -25,18 +27,24 @@ class Servo {
      * @brief Construct a new Servo object
      */
     Servo();
+
     /**
      * @brief Construct a new Servo object
      * @param port Port of the servo
      */
     Servo(uint8_t port);
 
+    /**
+     * @brief Setup function. Should always run in setup().
+     */
     void setup();
+
     /**
      * @brief Set the servo's target as an 8-bit integer
      * @param target 8-bit integer target
      */
     void setTarget(uint8_t target);
+
     /**
      * @brief Set the servo's target with a 0-100 value
      * @param target 0-100 integer target

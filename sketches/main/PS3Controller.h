@@ -20,6 +20,7 @@ class PS3Controller {
      * @brief Boolean that stores current controller connection state.
      */
     bool connected; 
+
     /**
      * @brief 8-bit integer array that stores the controller state.
      * 
@@ -34,10 +35,12 @@ class PS3Controller {
      * @brief USB port object
      */
     USB Usb;
+
     /**
      * @brief Bluetooth dongle object
      */
     BTD Btd;
+
     /**
      * @brief PS3 bluetooth connection object
      */
@@ -61,6 +64,7 @@ class PS3Controller {
      * @brief Updates the controller_state array
      */
     void updateControllerState();
+
     /**
      * @brief Return controller_state array as pointer
      * 
@@ -78,6 +82,7 @@ class PS3Controller {
      * @return false USB failed to initialize
      */
     bool setupTask();
+    
     /**
      * @brief PS3Controller loop task
      * 

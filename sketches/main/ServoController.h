@@ -12,6 +12,7 @@ class ServoController {
      * @brief Size of the servos array
      */
     uint8_t servos_size;
+
     /**
      * @brief Stores every servo object managed
      */
@@ -45,6 +46,7 @@ class ServoController {
      * @param target Target to set, 8-bit integer
      */
     void setTarget(uint8_t servo_index, uint8_t target);
+    
     /**
      * @brief Set the target of a specific servo by percent
      * @param servo_index Servo to set

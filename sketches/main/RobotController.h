@@ -22,6 +22,7 @@ class RobotController {
      * @brief Setup task for robot. Should run in setup().
      */
     void setupTask();
+
     /**
      * @brief Loop task for robot. Should run in loop().
      */
@@ -34,6 +35,7 @@ class RobotController {
      * @param arr_size Size of arr
      */
     void setServoTargets(uint8_t* arr, uint8_t arr_size);
+    
     /**
      * @brief Adds a servo to the servo controller
      * @param port Port of servo
