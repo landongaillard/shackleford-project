@@ -1,6 +1,5 @@
 #include <PS3BT.h>
 
-#define STATE_ARRAY_SIZE 3
 
 #ifndef PS3CONTROLLER_H
 #define PS3CONTROLLER_H
@@ -8,19 +7,16 @@
 
 class PS3Controller {
     private:
-    bool connected;
-    uint8_t controller_state[STATE_ARRAY_SIZE];
-
+    uint8_t controller_state[3];
     USB Usb;
     BTD Btd;
     PS3BT PS3;
     
+    void updateControllerState();
+
     public:
     PS3Controller();
 
-    bool isConnected();
-
-    void updateControllerState();
     uint8_t* getControllerState();
 
     bool setupTask();

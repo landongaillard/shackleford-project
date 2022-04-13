@@ -39,17 +39,7 @@ void ServoController::setTarget(uint8_t servo_index, uint8_t target)
     servos[servo_index].setTarget(target);
 }
 
-
 void ServoController::setTargetByPercent(uint8_t servo_index, uint8_t target)
 {
     servos[servo_index].setTargetByPercent(target);
-}
-
-
-void ServoController::setTargetsByArray(uint8_t* arr, uint8_t arr_size)
-{
-    for(uint8_t i = 0; i < arr_size; i++)
-    {
-        servos[i].setTarget(arr[i]);
-    }
 }

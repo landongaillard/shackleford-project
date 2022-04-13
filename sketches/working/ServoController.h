@@ -19,11 +19,8 @@ class ServoController {
     bool addServo(uint8_t port);
 
     void driveServos();
-
     void setTarget(uint8_t servo_index, uint8_t target);
     void setTargetByPercent(uint8_t servo_index, uint8_t target);
-
-    void setTargetsByArray(uint8_t* arr, uint8_t arr_size);
 };
 
 

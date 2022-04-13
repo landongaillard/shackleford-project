@@ -1,7 +1,7 @@
 #include "Servo.h"
 
-#define MIN_PULSE_WIDTH       850
-#define MAX_PULSE_WIDTH       2200
+#define MIN_PULSE_WIDTH       650
+#define MAX_PULSE_WIDTH       2100
 #define FREQUENCY             50
 
 

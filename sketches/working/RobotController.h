@@ -7,17 +7,20 @@
 
 class RobotController {
     private:
+    // can be changed for each bot
+    uint8_t* input_values;
     ServoController servo_controller;
+    //PS3Controller ps3_controller;
 
     public:
     RobotController();
 
-    void setupTask();
-    void loopTask();
-
-    // could make setServoTargets private and use a "useInputs" function
-    void setServoTargets(uint8_t* arr, uint8_t arr_size);
+    // todo: fix this shit
+    void setup();
+    void setServoTargets(uint8_t* arr);
+    void getPS3Inputs();
     void addServo(uint8_t port);
+    void loopTask();
 };
 
 
