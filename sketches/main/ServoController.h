@@ -1,3 +1,8 @@
+/**
+ * @file ServoController.h
+ * @brief Controls onboard servos
+ */
+
 #include "Servo.h"
 
 #define MAX_SERVOS 4

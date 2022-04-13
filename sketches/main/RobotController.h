@@ -1,3 +1,7 @@
+/**
+ * @file RobotController.h
+ * @brief Controls robot systems
+ */
 #include "ServoController.h"
 #include "PS3Controller.h"
 

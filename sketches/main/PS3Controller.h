@@ -1,8 +1,6 @@
 /**
  * @file PS3Controller.h
- * @author Landon Gaillard (landon.gaillard@gmail.com)
- * @brief Class for PS3 controller usage.
- * 
+ * @brief Connects PS3 controller and gets input from it
  */
 
 #include <PS3BT.h>

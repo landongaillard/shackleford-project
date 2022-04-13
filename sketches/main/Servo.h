@@ -1,3 +1,8 @@
+/**
+ * @file Servo.h
+ * @brief Controls individual servo
+ */
+
 #include <Adafruit_PWMServoDriver.h>
 #include <Wire.h>
 
