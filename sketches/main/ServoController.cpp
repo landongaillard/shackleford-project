@@ -10,6 +10,7 @@ ServoController::ServoController()
 
 void ServoController::setup()
 {
+    // setup every servo
     for(uint8_t i = 0; i < servos_size; i++)
     {
         servos[i].setup();
@@ -17,7 +18,7 @@ void ServoController::setup()
 }
 
 
-bool ServoController::addServo(uint8_t port)
+void ServoController::addServo(uint8_t port)
 {
     Servo new_servo(port);
     servos[servos_size] = new_servo;
@@ -27,6 +28,7 @@ bool ServoController::addServo(uint8_t port)
 
 void ServoController::driveServos()
 {
+    // drive every servo
     for(uint8_t i = 0; i < servos_size; i++)
     {
         servos[i].moveToTarget();
@@ -48,6 +50,7 @@ void ServoController::setTargetByPercent(uint8_t servo_index, uint8_t target)
 
 void ServoController::setTargetsByArray(uint8_t* arr, uint8_t arr_size)
 {
+    // set target of every servo by index
     for(uint8_t i = 0; i < arr_size; i++)
     {
         servos[i].setTarget(arr[i]);

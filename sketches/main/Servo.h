@@ -7,23 +7,45 @@
 
 class Servo {
     private:
-    // port of servo
+    /**
+     * @brief Stores the port of the servo
+     */
     uint8_t port;
-    // current servo target as a 8 bit (0-255) integer
+    /**
+     * @brief Servo's current target
+     */
     uint8_t target;
-    // pwm driver
+    /**
+     * @brief PWM driver object
+     */
     Adafruit_PWMServoDriver pwm;
 
     public:
+    /**
+     * @brief Construct a new Servo object
+     */
     Servo();
+    /**
+     * @brief Construct a new Servo object
+     * @param port Port of the servo
+     */
     Servo(uint8_t port);
 
     void setup();
-    // set target by 8 bit integer, 0-255
+    /**
+     * @brief Set the servo's target as an 8-bit integer
+     * @param target 8-bit integer target
+     */
     void setTarget(uint8_t target);
-    // set target by percent, 0-100
+    /**
+     * @brief Set the servo's target with a 0-100 value
+     * @param target 0-100 integer target
+     */
     void setTargetByPercent(uint8_t target);
 
+    /**
+     * @brief Drives servo to target
+     */
     void moveToTarget();
 };
 

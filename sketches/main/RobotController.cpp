@@ -2,7 +2,7 @@
 
 RobotController::RobotController()
 {
-
+    // empty constructor
 }
 
 

@@ -21,6 +21,7 @@ Servo::Servo(uint8_t port) : pwm()
 
 void Servo::setup()
 {
+    // start up pwm and set frequency
     pwm.begin();
     pwm.setPWMFreq(FREQUENCY);
 }
@@ -40,10 +41,12 @@ void Servo::setTargetByPercent(uint8_t target)
 
 void Servo::moveToTarget()
 {
+    // does some fancy math magic to drive servo
     // todo: see if int is overkill?
     int pulse_wide = map(target, 0, 255, MIN_PULSE_WIDTH, MAX_PULSE_WIDTH);
     int pulse_width = int(float(pulse_wide) / 1000000 * FREQUENCY * 4096);
 
+    // drive servo
     pwm.setPWM(port, 0, pulse_width);
 }
 
