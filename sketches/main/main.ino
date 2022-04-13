@@ -1,79 +1,45 @@
-/*
-          _ _,---._
-       ,-','       `-.___
-      /-;'               `._
-     /\/          ._   _,'o \
-    ( /\       _,--'\,','"`. )
-     |\      ,'o     \'    //\
-     |      \        /   ,--'""`-.
-     :       \_    _/ ,-'         `-._
-      \        `--'  /                )
-       `.  \`._    ,'     ________,','
-         .--`     ,'  ,--` __\___,;'
-          \`.,-- ,' ,`_)--'  /`.,'
-           \( ;  | | )      (`-/
-             `--'| |)       |-/
-               | | |        | |
-               | | |,.,-.   | |_
-               | `./ /   )---`  )
-              _|  /    ,',   ,-'
-     -hrr-   ,'|_(    /-<._,' |--,
-             |    `--'---.     \/ \
-             |          / \    /\  \
-           ,-^---._     |  \  /  \  \
-        ,-'        \----'   \/    \--`.
-       /            \              \   \
-*/
-
-/**
- * @file main.ino
- * @author Landon Gaillard (landon.gaillard@gmail.com)
- * @brief Main Arduino code for the Shackleford Project.
- *        This sketch uses a PS3 controller for input.
- * @version 0.1
- * @date 2022-04-12
- * 
- * @copyright GNU GPLv3
- * 
- */
-
 #include "RobotController.h"
 #include <PS3BT.h>
-#include "PS3Controller.h"
 
-RobotController robot;
-PS3Controller ps3;
+RobotController bot;
 
-/**
- * @brief Array to use in case of controller disconnection.
- *        Temporary measure for testing.
- */
-uint8_t default_arr[3] = {0, 0, 0};
+USB Usb;
+BTD Btd(&Usb);
+PS3BT PS3(&Btd);
 
+uint8_t arr[3];
 
 void setup() {
     Serial.begin(115200);
 
-    robot.addServo(0);
-    robot.addServo(1);
-    robot.addServo(2);
+    // check if usb opened
+    if (Usb.Init() == -1)
+    {
+        Serial.println("OSC did not start");
+        // halt program
+        while (1);
+    }
+    Serial.println("PS3 Bluetooth Library Started");
 
-    robot.setupTask();
-    ps3.setupTask();
+    bot.addServo(0);
+    bot.addServo(1);
+    bot.addServo(2);
+
+    bot.setup();
 }
 
 
 void loop() {
-    ps3.loopTask();
+    //Serial.println("test");
 
-    if(ps3.isConnected())
+    Usb.Task();
+    if(PS3.PS3Connected)
     {
-        robot.setServoTargets(ps3.getControllerState(), STATE_ARRAY_SIZE);
+        //Serial.println(PS3.getAnalogButton(R2));
+        arr[0] = PS3.getAnalogButton(R2);
+        arr[1] = PS3.getAnalogHat(LeftHatX);
+        arr[2] = PS3.getAnalogHat(RightHatX);
+        bot.setServoTargets(arr);
+        bot.loopTask();
     }
-    else
-    {
-        robot.setServoTargets(default_arr, STATE_ARRAY_SIZE);
-    }
-
-    robot.loopTask();
 }

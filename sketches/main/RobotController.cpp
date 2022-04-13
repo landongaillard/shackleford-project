@@ -1,12 +1,12 @@
 #include "RobotController.h"
-
+// readd ps3 controlelr here
 RobotController::RobotController()
 {
-    // empty constructor
+    //input_values = nullptr;
 }
 
 
-void RobotController::setupTask()
+void RobotController::setup()
 {
     servo_controller.setup();
 }
@@ -24,8 +24,18 @@ void RobotController::loopTask()
 }
 
 
-void RobotController::setServoTargets(uint8_t* arr, uint8_t arr_size)
+void RobotController::setServoTargets(uint8_t* arr)
 {
-    servo_controller.setTargetsByArray(arr, arr_size);
+    // not finished
+    servo_controller.setTarget(0, arr[0]);
+    servo_controller.setTarget(1, arr[1]);
+    servo_controller.setTarget(2, arr[2]);
+    //Serial.println(arr[0]);
+}
+
+
+void RobotController::getPS3Inputs()
+{
+    //input_values = ps3_controller.getControllerState();
 }
 

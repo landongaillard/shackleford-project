@@ -7,40 +7,20 @@
 
 class RobotController {
     private:
-    /**
-     * @brief Controller for robot's servos
-     */
+    // can be changed for each bot
+    uint8_t* input_values;
     ServoController servo_controller;
+    //PS3Controller ps3_controller;
 
     public:
-    /**
-     * @brief Constructs a new RobotController object
-     */
     RobotController();
 
-    /**
-     * @brief Setup task for robot. Should run in setup().
-     */
-    void setupTask();
-
-    /**
-     * @brief Loop task for robot. Should run in loop().
-     */
-    void loopTask();
-
-    // could make setServoTargets private and use a "useInputs" function
-    /**
-     * @brief Set servo targets using an 8-bit integer array
-     * @param arr 8-bit integer array
-     * @param arr_size Size of arr
-     */
-    void setServoTargets(uint8_t* arr, uint8_t arr_size);
-    
-    /**
-     * @brief Adds a servo to the servo controller
-     * @param port Port of servo
-     */
+    // todo: fix this shit
+    void setup();
+    void setServoTargets(uint8_t* arr);
+    void getPS3Inputs();
     void addServo(uint8_t port);
+    void loopTask();
 };
 
 

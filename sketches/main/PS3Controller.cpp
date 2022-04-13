@@ -1,23 +1,9 @@
 #include "PS3Controller.h"
+//#include <SPI.h>
 
-// try : Usb() ...
 PS3Controller::PS3Controller() : Btd(&Usb), PS3(&Btd)
 {
-    connected = false;
-}
 
-
-bool PS3Controller::isConnected()
-{
-    return connected;
-}
-
-
-void PS3Controller::updateControllerState()
-{
-    controller_state[0] = PS3.getAnalogButton(R2);
-    controller_state[1] = PS3.getAnalogHat(LeftHatX);
-    controller_state[2] = PS3.getAnalogHat(RightHatY);
 }
 
 
@@ -34,7 +20,7 @@ bool PS3Controller::setupTask()
         Serial.println("OSC did not start");
         return false;
     }
-    Serial.println("Bluetooth ready");
+
     return true;
 }
 
@@ -42,13 +28,12 @@ bool PS3Controller::setupTask()
 void PS3Controller::loopTask()
 {
     Usb.Task();
-    if(PS3.PS3Connected)
-    {
-        connected = true;
-        updateControllerState();
-    }
-    else
-    {
-        connected = false;
-    }
+
+}
+
+void PS3Controller::updateControllerState()
+{
+    uint8_t val = PS3.getAnalogButton(L2);
+    Serial.println(val);
+    controller_state[0] = val;
 }
