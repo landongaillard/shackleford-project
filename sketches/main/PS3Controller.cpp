@@ -17,7 +17,7 @@ void PS3Controller::updateControllerState()
 {
     controller_state[0] = PS3.getAnalogButton(R2);
     controller_state[1] = PS3.getAnalogHat(LeftHatX);
-    controller_state[2] = PS3.getAnalogHat(RightHatX);
+    controller_state[2] = PS3.getAnalogHat(RightHatY);
 }
 
 

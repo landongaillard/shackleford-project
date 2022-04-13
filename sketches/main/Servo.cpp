@@ -1,6 +1,6 @@
 #include "Servo.h"
 
-#define MIN_PULSE_WIDTH       850
+#define MIN_PULSE_WIDTH       800
 #define MAX_PULSE_WIDTH       2200
 #define FREQUENCY             50
 
@@ -34,14 +34,13 @@ void Servo::setTarget(uint8_t target)
 
 void Servo::setTargetByPercent(uint8_t target)
 {
-    this->setTarget(map(target, 0, 100, 0, 255));
+    setTarget(map(target, 0, 100, 0, 255));
 }
 
 
 void Servo::moveToTarget()
 {
-    // todo: not use int
-    
+    // todo: see if int is overkill?
     int pulse_wide = map(target, 0, 255, MIN_PULSE_WIDTH, MAX_PULSE_WIDTH);
     int pulse_width = int(float(pulse_wide) / 1000000 * FREQUENCY * 4096);
 

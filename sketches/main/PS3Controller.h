@@ -1,3 +1,10 @@
+/**
+ * @file PS3Controller.h
+ * @author Landon Gaillard (landon.gaillard@gmail.com)
+ * @brief Class for PS3 controller usage.
+ * 
+ */
+
 #include <PS3BT.h>
 
 #define STATE_ARRAY_SIZE 3
@@ -8,6 +15,7 @@
 
 class PS3Controller {
     private:
+
     bool connected;
     uint8_t controller_state[STATE_ARRAY_SIZE];
 
@@ -16,8 +24,18 @@ class PS3Controller {
     PS3BT PS3;
     
     public:
+    /**
+     * @brief Construct a new PS3Controller object
+     * 
+     */
     PS3Controller();
 
+    /**
+     * @brief Returns controller connection state
+     * 
+     * @return true Controller is connected
+     * @return false Controller is disconnected
+     */
     bool isConnected();
 
     void updateControllerState();
