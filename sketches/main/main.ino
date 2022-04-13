@@ -44,8 +44,10 @@
 RobotController robot;
 PS3Controller ps3;
 
-// Array to use in case of controller disconnection.
-// Temporary measure for testing.
+/**
+ * @brief Array to use in case of controller disconnection.
+ *        Temporary measure for testing.
+ */
 uint8_t default_arr[3] = {0, 0, 0};
 
 
