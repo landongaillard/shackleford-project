@@ -41,15 +41,8 @@
 #include <PS3BT.h>
 #include "PS3Controller.h"
 
-RobotController robot;
 PS3Controller ps3;
-
-/**
- * @brief Array to use in case of controller disconnection.
- *        Temporary measure for testing.
- */
-uint8_t default_arr[3] = {0, 0, 0};
-
+RobotController robot;
 
 void setup() {
     Serial.begin(115200);
@@ -58,22 +51,16 @@ void setup() {
     robot.addServo(1);
     robot.addServo(2);
 
-    robot.setupTask();
-    ps3.setupTask();
+    robot.setupRobotController();
+    ps3.setupPS3Controller();
 }
 
 
 void loop() {
     ps3.loopTask();
 
-    if(ps3.isConnected())
-    {
-        robot.setServoTargets(ps3.getControllerState(), STATE_ARRAY_SIZE);
-    }
-    else
-    {
-        robot.setServoTargets(default_arr, STATE_ARRAY_SIZE);
-    }
+    robot.controlByArray(ps3.getControllerState(),
+                         ps3.getControllerStateSize());
 
     robot.loopTask();
 }

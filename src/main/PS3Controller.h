@@ -13,10 +13,7 @@
 
 class PS3Controller {
     private:
-
-    /**
-     * @brief Boolean that stores current controller connection state.
-     */
+    //! Boolean that stores current controller connection state.
     bool connected; 
 
     /**
@@ -29,49 +26,44 @@ class PS3Controller {
      */
     uint8_t controller_state[STATE_ARRAY_SIZE];
 
-    /**
-     * @brief USB port object
-     */
+    //! USB port object.
     USB Usb;
 
-    /**
-     * @brief Bluetooth dongle object
-     */
+    //! Bluetooth dongle object.
     BTD Btd;
 
-    /**
-     * @brief PS3 bluetooth connection object
-     */
+    //! PS3 bluetooth connection object.
     PS3BT PS3;
     
     public:
-    /**
-     * @brief Construct a new PS3Controller object
-     */
+    //! Construct a new PS3Controller object.
     PS3Controller();
 
     /**
-     * @brief Returns controller connection state
+     * @brief Returns controller connection state.
      * 
-     * @return true Controller is connected
-     * @return false Controller is disconnected
+     * @return true Controller is connected.
+     * @return false Controller is disconnected.
      */
     bool isConnected();
 
-    /**
-     * @brief Updates the controller_state array
-     */
+    //! Updates the controller_state array.
     void updateControllerState();
 
     /**
-     * @brief Return controller_state array as pointer
-     * 
-     * @return uint8_t* 8-bit array for controller inputs
+     * @brief Returns controller_state array as pointer.
+     * @return uint8_t* 8-bit array for controller inputs.
      */
     uint8_t* getControllerState();
 
     /**
-     * @brief Setup function for PS3Controller
+     * @brief Returns controller_state size.
+     * @return uint8_t Size of controller_state.
+     */
+    uint8_t getControllerStateSize();
+
+    /**
+     * @brief Setup function for PS3Controller.
      * 
      * Sets up the PS3Controller for use. Returns true if the USB port
      * successfully initializes, returns false if not
@@ -79,10 +71,10 @@ class PS3Controller {
      * @return true USB initialized successfully
      * @return false USB failed to initialize
      */
-    bool setupTask();
+    bool setupPS3Controller();
     
     /**
-     * @brief PS3Controller loop task
+     * @brief PS3Controller loop task.
      * 
      * PS3Controller loop task keeps the USB port open and checks if the
      * controller is connected, updating the controller's 'connected' value.

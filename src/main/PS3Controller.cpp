@@ -27,7 +27,12 @@ uint8_t* PS3Controller::getControllerState()
 }
 
 
-bool PS3Controller::setupTask()
+uint8_t PS3Controller::getControllerStateSize()
+{
+    return STATE_ARRAY_SIZE;
+}
+
+bool PS3Controller::setupPS3Controller()
 {
     if (Usb.Init() == -1)
     {
@@ -52,3 +57,4 @@ void PS3Controller::loopTask()
         connected = false;
     }
 }
+

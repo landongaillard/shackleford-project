@@ -7,8 +7,14 @@
 
 Servo::Servo() : pwm()
 {
+    // this shouldn't ever be called; it is only defined because the
+    // ServoController class maintains an array of servos, and the compiler
+    // gets upset if there is no default constructor.
+    //
+    // it's probably possible to get around this? todo.
     port = 255;
     target = 0;
+    max = 1;
 }
 
 
@@ -16,10 +22,18 @@ Servo::Servo(uint8_t port) : pwm()
 {
     this->port = port;
     target = 0;
+    max = 1;
+}
+
+Servo::Servo(uint8_t port, float max) : pwm()
+{
+    this->port = port;
+    target = 0;
+    this->max = max;
 }
 
 
-void Servo::setup()
+void Servo::setupServo()
 {
     // start up pwm and set frequency
     pwm.begin();
@@ -29,13 +43,9 @@ void Servo::setup()
 
 void Servo::setTarget(uint8_t target)
 {
-    this->target = target;
-}
-
-
-void Servo::setTargetByPercent(uint8_t target)
-{
-    setTarget(map(target, 0, 100, 0, 255));
+    // set target by multiplying it with max
+    // there's probably a more efficient way to do this
+    this->target = uint8_t(float(target) * max);
 }
 
 
@@ -49,5 +59,3 @@ void Servo::moveToTarget()
     // drive servo
     pwm.setPWM(port, 0, pulse_width);
 }
-
-

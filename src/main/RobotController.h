@@ -1,9 +1,8 @@
 /**
  * @file RobotController.h
- * @brief Controls robot systems
+ * @brief Controls robot systems.
  */
 #include "ServoController.h"
-#include "PS3Controller.h"
 
 #ifndef ROBOTCONTROLLER_H
 #define ROBOTCONTROLLER_H
@@ -11,40 +10,38 @@
 
 class RobotController {
     private:
-    /**
-     * @brief Controller for robot's servos
-     */
+    //! Controller for robot's servos.
     ServoController servo_controller;
 
     public:
-    /**
-     * @brief Constructs a new RobotController object
-     */
+    //! Constructs a new RobotController object.
     RobotController();
 
-    /**
-     * @brief Setup task for robot. Should run in setup().
-     */
-    void setupTask();
+    //! Setup task for robot. Should run in setup().
+    void setupRobotController();
 
     /**
-     * @brief Loop task for robot. Should run in loop().
+     * @brief Performs loop tasks for RobotController. Should run every loop().
+     * 
+     * Performs tasks that need to run every loop, such as driving servos or
+     * motors. Should be placed after the input has been updated and after
+     * the controlByArray() function.
+     * 
      */
     void loopTask();
 
-    // could make setServoTargets private and use a "useInputs" function
     /**
-     * @brief Set servo targets using an 8-bit integer array
-     * @param arr 8-bit integer array
-     * @param arr_size Size of arr
-     */
-    void setServoTargets(uint8_t* arr, uint8_t arr_size);
-    
-    /**
-     * @brief Adds a servo to the servo controller
-     * @param port Port of servo
+     * @brief Adds a servo to the servo controller.
+     * @param port Port of servo.
      */
     void addServo(uint8_t port);
+
+    /**
+     * @brief Controls the robot via an array of inputs.
+     * @param arr 
+     * @param arr_size 
+     */
+    void controlByArray(uint8_t *arr, uint8_t arr_size);
 };
 
 

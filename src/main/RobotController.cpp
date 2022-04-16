@@ -2,13 +2,13 @@
 
 RobotController::RobotController()
 {
-    // empty constructor
+    // pass
 }
 
 
-void RobotController::setupTask()
+void RobotController::setupRobotController()
 {
-    servo_controller.setup();
+    servo_controller.setupServoController();
 }
 
 
@@ -23,9 +23,9 @@ void RobotController::loopTask()
     servo_controller.driveServos();
 }
 
-
-void RobotController::setServoTargets(uint8_t* arr, uint8_t arr_size)
+// make sure this passes the array like its supposed to
+// god i hate c++ arrays
+void RobotController::controlByArray(uint8_t *arr, uint8_t arr_size)
 {
     servo_controller.setTargetsByArray(arr, arr_size);
 }
-
