@@ -23,7 +23,7 @@ void RobotController::loopTask()
     servo_controller.driveServos();
 }
 
-// make sure this passes the array like its supposed to
+// todo: make sure this passes the array like its supposed to
 // god i hate c++ arrays
 void RobotController::controlByArray(uint8_t *arr, uint8_t arr_size)
 {
