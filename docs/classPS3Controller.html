@@ -108,11 +108,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a9bfdbb70c6d06bd482c517f24d8bbe86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the controller_state array.  <a href="classPS3Controller.html#a9bfdbb70c6d06bd482c517f24d8bbe86">More...</a><br /></td></tr>
 <tr class="separator:a9bfdbb70c6d06bd482c517f24d8bbe86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f2131d9b6ed6188f8e99af250d58b00"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPS3Controller.html#a1f2131d9b6ed6188f8e99af250d58b00">getControllerState</a> ()</td></tr>
-<tr class="memdesc:a1f2131d9b6ed6188f8e99af250d58b00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return controller_state array as pointer.  <a href="classPS3Controller.html#a1f2131d9b6ed6188f8e99af250d58b00">More...</a><br /></td></tr>
+<tr class="memdesc:a1f2131d9b6ed6188f8e99af250d58b00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns controller_state array as pointer.  <a href="classPS3Controller.html#a1f2131d9b6ed6188f8e99af250d58b00">More...</a><br /></td></tr>
 <tr class="separator:a1f2131d9b6ed6188f8e99af250d58b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7a18f94cf28a89270226677500b4778"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPS3Controller.html#ad7a18f94cf28a89270226677500b4778">setupTask</a> ()</td></tr>
-<tr class="memdesc:ad7a18f94cf28a89270226677500b4778"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup function for <a class="el" href="classPS3Controller.html">PS3Controller</a>.  <a href="classPS3Controller.html#ad7a18f94cf28a89270226677500b4778">More...</a><br /></td></tr>
-<tr class="separator:ad7a18f94cf28a89270226677500b4778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bbc59424cf209301c9bdd1e96eca179"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPS3Controller.html#a9bbc59424cf209301c9bdd1e96eca179">getControllerStateSize</a> ()</td></tr>
+<tr class="memdesc:a9bbc59424cf209301c9bdd1e96eca179"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns controller_state size.  <a href="classPS3Controller.html#a9bbc59424cf209301c9bdd1e96eca179">More...</a><br /></td></tr>
+<tr class="separator:a9bbc59424cf209301c9bdd1e96eca179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac23406dcdac3a0e8bb28a78fbeef40a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPS3Controller.html#ac23406dcdac3a0e8bb28a78fbeef40a3">setupPS3Controller</a> ()</td></tr>
+<tr class="memdesc:ac23406dcdac3a0e8bb28a78fbeef40a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup function for <a class="el" href="classPS3Controller.html">PS3Controller</a>.  <a href="classPS3Controller.html#ac23406dcdac3a0e8bb28a78fbeef40a3">More...</a><br /></td></tr>
+<tr class="separator:ac23406dcdac3a0e8bb28a78fbeef40a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d399a4631ddb09068730c17802b21fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPS3Controller.html#a1d399a4631ddb09068730c17802b21fc">loopTask</a> ()</td></tr>
 <tr class="memdesc:a1d399a4631ddb09068730c17802b21fc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPS3Controller.html">PS3Controller</a> loop task.  <a href="classPS3Controller.html#a1d399a4631ddb09068730c17802b21fc">More...</a><br /></td></tr>
 <tr class="separator:a1d399a4631ddb09068730c17802b21fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,8 +174,28 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Return controller_state array as pointer. </p>
-<dl class="section return"><dt>Returns</dt><dd>uint8_t* 8-bit array for controller inputs </dd></dl>
+<p>Returns controller_state array as pointer. </p>
+<dl class="section return"><dt>Returns</dt><dd>uint8_t* 8-bit array for controller inputs. </dd></dl>
+
+</div>
+</div>
+<a id="a9bbc59424cf209301c9bdd1e96eca179" name="a9bbc59424cf209301c9bdd1e96eca179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bbc59424cf209301c9bdd1e96eca179">&#9670;&nbsp;</a></span>getControllerStateSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t PS3Controller::getControllerStateSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns controller_state size. </p>
+<dl class="section return"><dt>Returns</dt><dd>uint8_t Size of controller_state. </dd></dl>
 
 </div>
 </div>
@@ -192,9 +215,9 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns controller connection state. </p>
-<dl class="section return"><dt>Returns</dt><dd>true Controller is connected </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Controller is connected. </dd>
 <dd>
-false Controller is disconnected </dd></dl>
+false Controller is disconnected. </dd></dl>
 
 </div>
 </div>
@@ -218,14 +241,14 @@ false Controller is disconnected </dd></dl>
 
 </div>
 </div>
-<a id="ad7a18f94cf28a89270226677500b4778" name="ad7a18f94cf28a89270226677500b4778"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad7a18f94cf28a89270226677500b4778">&#9670;&nbsp;</a></span>setupTask()</h2>
+<a id="ac23406dcdac3a0e8bb28a78fbeef40a3" name="ac23406dcdac3a0e8bb28a78fbeef40a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac23406dcdac3a0e8bb28a78fbeef40a3">&#9670;&nbsp;</a></span>setupPS3Controller()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool PS3Controller::setupTask </td>
+          <td class="memname">bool PS3Controller::setupPS3Controller </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -330,7 +353,8 @@ false USB failed to initialize </dd></dl>
 </div><div class="memdoc">
 
 <p>8-bit integer array that stores the controller state. </p>
-<p >Stores the controller's current inputs in an array whose size is defined at the top of the file by STATE_ARRAY_SIZE. The values are stored as 8-bit integers, which, in this case, come directly from the controller. </p>
+<p >Stores the controller's current inputs in an array whose size is defined at the top of the file by STATE_ARRAY_SIZE. The values are stored as 8-bit integers, which, in this case, come directly from the controller.</p>
+<p >As of 0.2, the array's corresponding values are: [0] : Throttle servo [1] : Steering servo </p>
 
 </div>
 </div>

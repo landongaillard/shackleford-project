@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ps3controller_0',['PS3Controller',['../classPS3Controller.html#a526cb88f473f8381ec1e1be7d1673e4e',1,'PS3Controller']]]
+  ['movetotarget_0',['moveToTarget',['../classServo.html#a6964b2b44eee906831c8d1833665e161',1,'Servo']]]
 ];

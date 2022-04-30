@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usb_0',['Usb',['../classPS3Controller.html#a659d9dced14b3c9393acef3f993ceacd',1,'PS3Controller']]]
+  ['target_0',['target',['../classServo.html#a1c622513237ee722740b9b1b519b3c03',1,'Servo']]]
 ];
