@@ -30,8 +30,8 @@
  * @author Landon Gaillard (landon.gaillard@gmail.com)
  * @brief Main Arduino code for the Shackleford Project.
  *        This sketch uses a PS3 controller for input.
- * @version 0.1
- * @date 2022-04-12
+ * @version 0.2
+ * @date 2022-04-30
  * 
  * @copyright GNU GPLv3
  * 
@@ -43,6 +43,9 @@
 
 PS3Controller ps3;
 RobotController robot;
+
+//! Control values to use if no controller is connected
+uint8_t def_arr[2] = {127, 127};
 
 void setup() {
     Serial.begin(115200);
@@ -59,8 +62,18 @@ void setup() {
 void loop() {
     ps3.loopTask();
 
-    robot.controlByArray(ps3.getControllerState(),
-                         ps3.getControllerStateSize());
+    if(ps3.isConnected())
+    {
+        // if controller is connected, use values from controller
+        robot.controlByArray(ps3.getControllerState(),
+                             ps3.getControllerStateSize());
+    }
+    else
+    {
+        // if controller not connected, use default values
+        robot.controlByArray(def_arr, 2);
+    }
+    
 
     robot.loopTask();
 }

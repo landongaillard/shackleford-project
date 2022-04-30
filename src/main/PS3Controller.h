@@ -5,7 +5,7 @@
 
 #include <PS3BT.h>
 
-#define STATE_ARRAY_SIZE 3
+#define STATE_ARRAY_SIZE 2
 
 #ifndef PS3CONTROLLER_H
 #define PS3CONTROLLER_H
@@ -22,6 +22,10 @@ class PS3Controller {
      * Stores the controller's current inputs in an array whose size is defined
      * at the top of the file by STATE_ARRAY_SIZE. The values are stored as
      * 8-bit integers, which, in this case, come directly from the controller.
+     * 
+     * As of 0.2, the array's corresponding values are:
+     * [0] : Throttle servo
+     * [1] : Steering servo
      * 
      */
     uint8_t controller_state[STATE_ARRAY_SIZE];
