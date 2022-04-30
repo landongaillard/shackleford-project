@@ -15,9 +15,10 @@ bool PS3Controller::isConnected()
 
 void PS3Controller::updateControllerState()
 {
-    controller_state[0] = PS3.getAnalogButton(R2);
+    // throttle servo
+    controller_state[0] = PS3.getAnalogHat(RightHatY);
+    // steering servo
     controller_state[1] = PS3.getAnalogHat(LeftHatX);
-    controller_state[2] = PS3.getAnalogHat(RightHatY);
 }
 
 
@@ -27,7 +28,12 @@ uint8_t* PS3Controller::getControllerState()
 }
 
 
-bool PS3Controller::setupTask()
+uint8_t PS3Controller::getControllerStateSize()
+{
+    return STATE_ARRAY_SIZE;
+}
+
+bool PS3Controller::setupPS3Controller()
 {
     if (Usb.Init() == -1)
     {
@@ -52,3 +58,4 @@ void PS3Controller::loopTask()
         connected = false;
     }
 }
+

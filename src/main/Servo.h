@@ -12,37 +12,37 @@
 
 class Servo {
     private:
-    /**
-     * @brief Stores the port of the servo
-     */
+    //! Stores the port of the servo.
     uint8_t port;
 
-    /**
-     * @brief Servo's current target
-     */
+    //! Stores the servo's current target.
     uint8_t target;
 
-    /**
-     * @brief PWM driver object
-     */
+    //! Maximum position of servo, 0.0 to 1.0.
+    float max;
+
+    //! PWM driver object.
     Adafruit_PWMServoDriver pwm;
 
     public:
-    /**
-     * @brief Construct a new Servo object
-     */
+    //! Construct a new Servo object with default values. Should not be used.
     Servo();
 
     /**
-     * @brief Construct a new Servo object
-     * @param port Port of the servo
+     * @brief Construct a new Servo object with port.
+     * @param port Port of servo
      */
     Servo(uint8_t port);
 
     /**
-     * @brief Setup function. Should always run in setup().
+     * @brief Construct a new Servo object with port and max.
+     * @param port Port of servo
+     * @param max Maximum position, as a decimal from 0 to 1.0
      */
-    void setup();
+    Servo(uint8_t port, float max);
+
+    //! Setup function. Should always run in setup().
+    void setupServo();
 
     /**
      * @brief Set the servo's target as an 8-bit integer
@@ -50,15 +50,7 @@ class Servo {
      */
     void setTarget(uint8_t target);
 
-    /**
-     * @brief Set the servo's target with a 0-100 value
-     * @param target 0-100 integer target
-     */
-    void setTargetByPercent(uint8_t target);
-
-    /**
-     * @brief Drives servo to target
-     */
+    //! Drives servo to target
     void moveToTarget();
 };
 

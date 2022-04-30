@@ -8,12 +8,12 @@ ServoController::ServoController()
 }
 
 
-void ServoController::setup()
+void ServoController::setupServoController()
 {
     // setup every servo
     for(uint8_t i = 0; i < servos_size; i++)
     {
-        servos[i].setup();
+        servos[i].setupServo();
     }
 }
 
@@ -39,12 +39,6 @@ void ServoController::driveServos()
 void ServoController::setTarget(uint8_t servo_index, uint8_t target)
 {
     servos[servo_index].setTarget(target);
-}
-
-
-void ServoController::setTargetByPercent(uint8_t servo_index, uint8_t target)
-{
-    servos[servo_index].setTargetByPercent(target);
 }
 
 
